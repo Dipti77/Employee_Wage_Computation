@@ -4,11 +4,8 @@ public class EmpWageComputation {
 
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_Full_TIME = 2;
-	public static final int EMP_WAGE_PER_HR = 20;
-	public static final int WORKING_DAYS = 20;
-	public static final int MAX_WORKING_HRS = 100;
 
-	public void computeEmpWage(){
+	public void computeEmpWage(String companyName, int EMP_WAGE_PER_HR, int WORKING_DAYS, int MAX_WORKING_HRS){
 		
 		int empHrs = 0;
 		int totalEmpHrs = 0;
@@ -47,8 +44,9 @@ public class EmpWageComputation {
 	public static void main(String[] args) {
 		
 		EmpWageComputation ewc = new EmpWageComputation();
-		ewc.computeEmpWage();
-		
+		ewc.computeEmpWage("Amazon", 50, 15, 120);
+		System.out.println();
+		ewc.computeEmpWage("Google", 80, 20, 200);
 	}
 }
 
